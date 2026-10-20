@@ -4,7 +4,7 @@
 
 ## 项目简介
 
-CHESNACK 是一个休闲零食主题的 B2C 电商平台,涵盖辣条、面包、饼干、巧克力、坚果等休闲零食的商品浏览与搜索、购物车、下单支付、订单管理、评价、社区(发帖/评论/关注/上传)、站内实时通知与管理员后台等完整业务闭环。
+CHESNACK 是一个休闲零食主题的 B2C 电商平台,涵盖休闲零食商品浏览与搜索、购物车、下单支付、订单管理、评价、社区(发帖/评论/关注/上传)、站内实时通知与管理员后台等完整业务闭环。
 
 项目采用 **Vue3 + Spring Boot** 前后端分离架构,配套 MySQL、Redis、RabbitMQ、Elasticsearch 四大中间件,支持 Docker Compose 一键部署。旧版 JSP + Servlet 实现保留在 `CHESNACK/src` 与 `CHESNACK/WebContent`,作为演进参考。
 
