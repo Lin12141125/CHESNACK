@@ -1,0 +1,205 @@
+body{
+    margin:0;
+    padding: 0;
+    background-color: #fbf8ef;
+}
+
+.subnav{
+    display: inline-block;
+    background-color: #f2866a;
+    width:20%;
+    height: 790px;
+    float:left;
+}
+
+.myname{
+    display: inline-block;
+    width: 20%;
+    height: 100px;
+}
+.myname img{
+    position: relative;
+    left:30px;
+    top:20px;
+}
+.myname p{
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    left: 110px;
+    bottom: 55px;
+}
+
+.homepage,.order,.cart,.delivery,.set,.more{
+    display: inline-block;
+    width: 100%;
+    height: 80px;
+}
+.homepage:hover,
+.order:hover,
+.cart:hover,
+.delivery:hover,
+.set:hover,
+.more:hover{
+    background-color: #66cdd4;
+}
+.homepage img,
+.order img,
+.cart img,
+.delivery img,
+.set img,
+.more img{
+    position: relative;
+    left: 40px;
+    top:20px;
+}
+.homepage a,
+.order a,
+.cart a,
+.delivery a,
+.set a,
+.more a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+    left:60px;
+    top:8px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.homepage a:hover,
+.order a:hover,
+.cart a:hover,
+.delivery a:hover,
+.set a:hover,
+.more a:hover{
+    color: #f2866a;
+}
+
+.header{
+    float: right;
+    width: 75%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.header p{
+    color: #f2866a;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+.header input{
+    width:250px;
+    height: 30px;
+    border-radius: 15px;
+    opacity: 0.4;
+    background-color: #faaa87;
+    border: 1px solid #faaa87;
+    position: relative;
+    bottom: 5px;
+}
+.header input::placeholder{
+    color: black;
+    font-weight: bold;
+}
+
+.header button{
+    background-color: #fbf8ef;
+    color: #faaa87;
+    border: none;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.main{
+    display: inline-block;
+    background-color: white;
+    border: 1px solid rgb(194, 194, 194);
+    border-radius: 40px;
+    width: 75%;
+    margin: auto;
+    margin-left: 50px;
+    height: auto;
+}
+
+.top{
+    display: flex;
+}
+.top p{
+    color:#faaa87;
+    font-size: 30px;
+    display: inline-block;
+    position: relative;
+    bottom: 10px;
+    left: 30px;
+}
+.top button{
+    background-color: #66cdd4;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    border-radius: 15px;
+    height: 50px;
+    position: relative;
+    top: 20px;
+    left: 700px;
+}
+.介绍{
+    position: relative;
+    bottom: 20px;
+}
+.介绍 img{
+    margin-left: 50px;
+    float: left;
+}
+.介绍 p{
+    font-size: 30px;
+    position: relative;
+    left: 30px;
+}
+#gray{
+    color: gray;
+}
+
+.评价{
+    position: relative;
+    bottom: 50px;
+}
+.评价 button{
+    border-radius: 30px;
+    font-size: 30px;    
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(194, 194, 194);
+    position: relative;
+    top: 80px;
+    right: 200px;
+}
+
+.评价 button:focus{
+    background-color: #faaa87;
+    color: white;
+}
+.评价 form{
+    position: relative;
+    left: 600px;
+}
+
+.gray{
+    background-color: #f3f1f2;
+    width: 90%;
+    height: 500px;
+    position: relative;
+    left:6%;
+    bottom: 30px;
+    border-radius: 20px;
+}
+textarea{
+    position: relative;
+    left: 40px;
+    top: 20px;
+}

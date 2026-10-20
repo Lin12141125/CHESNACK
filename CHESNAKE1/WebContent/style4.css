@@ -1,0 +1,467 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #fbf8ef;
+}
+a{
+    text-decoration: none;
+}
+.head{
+    background-color: #f2866a;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top:0;
+}
+input{
+    width:250px;
+    height: 30px;
+    border-radius: 15px;
+    opacity: 0.7;
+    border: 1px solid white;
+    position: relative;
+    left: 60%;
+}
+.head img{
+    position: relative;
+    left: 61%;
+    top: 10px;
+}
+.head button{
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #997ce8;
+    color: white;
+    border: 1px solid #997ce8;
+    position: relative;
+    left: 65%;
+    top: 10px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.banner{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    top: 100px;
+}
+
+.bigpicture img{
+    width: 500px;
+    height: 480px;
+    overflow: hidden;
+    border-radius: 30px;
+    position: relative;
+    top: 100px;
+}
+.detail{
+    width: 500px;
+    height: 480px;
+    background-color: white;
+    border-radius: 30px;
+    position: relative;
+    top: 100px;
+    display: inline-block;
+}
+.detail h1{
+    position: relative;
+    top: 5px;
+    left: 10px;
+}
+.detaill{
+    width: 500px;
+    height: 480px;
+    background-color: white;
+    border-radius: 30px;
+    position: relative;
+    top: 100px;
+    display: inline-block;
+}
+.detaill h1{
+    position: relative;
+    top: 5px;
+    left: 10px;
+}
+#price{
+    color: #ff9404;
+    font-size: 60px;
+    display: inline-block;
+    font-weight: bolder;
+    position: relative;
+    bottom: 80px;
+    left: 10px;
+}
+#销量{
+    color: gray;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    left:100px;
+    bottom: 110px;
+}
+#delivery,#express,#variety{
+    position: relative;
+    bottom: 150px;
+    left: 10px;
+}
+
+#five,#six,#ten,#eleven,#twelve,#fifteen{
+    width: 60px;
+    height: 40px;
+    border: 1px solid #997ce8;
+    border-radius: 10px;
+    line-height: 40px;
+    text-align: center;
+    display: inline-block;
+}
+#five:hover,#six:hover,#ten:hover,
+#eleven:hover,#twelve:hover,#fifteen:hover{
+    background-color: #997ce8;
+    color: white;
+}
+#five{
+    position: relative;
+    bottom: 180px;
+    left: 80px;
+}
+#six{
+    position: relative;
+    bottom: 180px;
+    left: 100px;
+}
+#ten{
+    position: relative;
+    bottom: 180px;
+    left: 120px;
+}
+#eleven{
+    position: relative;
+    bottom: 130px;
+    right: 120px;
+}
+#twelve{
+    position: relative;
+    bottom: 130px;
+    right: 100px;
+}
+#fifteen{
+    position: relative;
+    bottom: 130px;
+    right: 80px;
+}
+
+#num{
+    position: relative;
+    bottom: 130px;
+    left:10px;
+}
+#减,#加,#数{
+border: 1px solid #997ce8;
+display: inline-block;
+height: 35px;
+text-align: center;
+position: relative;
+bottom: 170px;
+left: 100px;
+line-height: 35px;
+font-size: 20px;
+}
+#减{
+    border-radius: 15px 0 0 15px;
+    width: 30px;
+    color: #ff9404;
+    font-weight: bold;
+}
+#数{
+    width: 70px;
+}
+#加{
+    border-radius: 0 15px 15px 0;
+    width: 30px;
+    color: #ff9404;
+    font-weight: bold;
+}
+#add,#buy{
+    height: 40px;
+    border-radius:15px;
+    line-height: 40px;
+    position: relative;
+    bottom: 120px;
+    right:140px;
+}
+#add{
+    width: 150px;
+    background-color: #ffecce;
+    border:1px solid #ffecce;
+}
+#buy{
+    width: 120px;
+    background-color: #ffb03a;
+    border: 1px solid #ffb03a;
+    color: white;
+}
+
+.detail img{
+    position: relative;
+    bottom: 110px;
+    right: 100px;
+}
+#收藏{
+    display: inline-block;
+    position: relative;
+    bottom: 180px;
+    left:380px;
+    font-size: 25px;
+}
+
+.小标题{
+    position: relative;
+    top:130px;
+    left:80px;
+}
+#紫{
+    display: inline-block;
+    color: #997ce8;
+    font-size: 20px;
+}
+.小标题 a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #565654;
+    position: relative;
+    bottom: 20px;
+    left: 80px;
+}
+
+.great,.normal,.bad{
+    display: inline-block;
+    width: 130px;
+    height: 30px;
+    position: relative;
+    top: 110px;
+    left: 90px;
+    border-radius: 20px;
+    line-height: 30px;
+    text-align: center;
+    margin-right: 15px;
+}
+.great{
+    background-color: #f2866a;
+    border: 1px solid #f2866a;
+    color: white;
+}
+.normal,.bad{
+    background-color: white;
+    border-radius: 1px solid white;
+    color: #565654;
+}
+
+.container{
+    width: 88%;
+    height: 80px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 40px;
+    position: relative;
+    top: 130px;
+    left: 6%;
+    margin-top: 10px;
+}
+.circle1,.circle2,.circle3{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 50px;
+    position: relative;
+    top: 15px;
+    left: 35px;
+}
+.circle1{
+    background-color: #f2866a;
+}
+.circle2{
+    background-color: #faaa87;   
+}
+.circle3{
+    background-color: #ffb03a; 
+    position: relative;
+    bottom: 100px;
+    left: 20px;
+}
+
+#grey{
+    display: inline-block;
+    color: #ccc;
+    position: relative;
+    left: 50px;
+    bottom: 25px;
+}
+#black{
+    display: inline-block;
+    font-size: 25px;
+    color: #565654;
+    position: relative;
+    left: -220px;
+    top: 10px;
+}
+.container a #comment{
+    display: inline-block;
+    color: #565654;
+    font-size: 20px;
+    position: relative;
+    left: 25%;
+    top: 20px;
+}
+.container img{
+    float: right;
+    position: relative;
+    right: 15%;
+    top: 10px;
+    margin-left: 5px;
+}
+.secondary{
+    position: relative;
+    left: 12%;
+    top: 130px;
+}
+.secondary input[type="submit"]{
+    background-color: #66cdd4;
+    width: 100px;
+    height: 40px;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    position: relative;
+    left: 70%;
+    bottom: 60px;
+}
+#jubao{
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    background-color: #997ce8;
+    text-align: center;
+    border: 1px solid #997ce8;
+    border-radius: 20px;
+    position: relative;
+    left: 50%;
+    bottom: 3px;
+}
+.rect{
+    width: 88%;
+    height: 30px;
+    background-color: white;
+    position: relative;
+    top: 150px;
+    left: 6%;
+}
+.rect img{
+    position: relative;
+    left: 45%;
+    top: 5px;
+}
+#展开{
+    position: relative;
+    top: 125px;
+    left: 36%;
+    font-size: 30px;
+    color: #565654;
+}
+
+#left,#right{
+    display: inline-block;
+    position: relative;
+    top: 100px;
+    left: 100px;
+    font-size: 25px;
+    color: #565654;
+}
+#right{
+    position: relative;
+    left: 180px;
+}
+.图{
+    width: 1000px;
+    height: 1500px;
+    background-color: white;
+    border-radius: 30px;
+    position: relative;
+    margin: auto;
+    top: 100px;
+}
+.图 img{
+    margin-left:95px;
+    margin-top: 30px;
+}
+
+#description{
+    position: relative;
+    margin: auto;
+    top: 120px;
+    font-size: 20px;
+    color: #565654;
+    display: block;
+    width: 800px;
+}
+
+.SHOW1{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+}
+.SHOW2{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    position:relative;
+    top: 25px;
+}
+.show{
+    display: inline-block;
+    width: 250px;
+    height: 300px;
+    background-color: white;
+    border-radius: 20px;
+    border:1px solid rgb(140, 138, 138);
+    position: relative;
+    top:250px;
+}
+.show img{
+    margin-left: 20px;
+    margin-top: 10px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.show p{
+    position:relative;
+    margin: 10px 0 0 20px;
+}
+p:nth-child(3){
+    display: inline-block;
+    color:#fdb447;
+    font-size: 30px;
+    font-weight: 900;
+    position: relative;
+    bottom:15px;
+    left: 5px;
+}
+p:nth-last-child(2){
+    display: inline-block;
+    color:gray;
+    font-size: 12px;
+    position: relative;
+    bottom:20px;
+    right: 5px;
+}
+#more{
+    display: inline-block;
+    font-size: 40px;
+    position: relative;
+    bottom: 20px;
+    right:5px;
+}

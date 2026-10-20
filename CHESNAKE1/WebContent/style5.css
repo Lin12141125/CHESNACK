@@ -1,0 +1,142 @@
+body{
+    background-color: #fbf8ef;
+}
+/* 导航栏 */
+.navbar{
+    background-color: #f2866a;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    height: 50px;
+}
+.navbar ul li{
+    float:left;
+}
+
+input#search{
+    width:250px;
+    height: 30px;
+    border-radius: 15px;
+    opacity: 0.7;
+    margin-right: 15px;
+    margin-left: 15px;
+    border: 1px solid white;
+}
+
+.search{
+    display: flex;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+a{
+    margin-right: 40px;
+    text-decoration: none;
+    font-size: 25px;
+}
+#cart{
+    margin-right: 0;
+}
+
+a:link{
+    color: white;
+}
+a:hover{
+    color:#ab7ccc;
+    font-weight: bold;
+}
+
+.user-avatar{
+    width:30px;
+    height: 30px;
+    border-radius: 50%;
+    background-image: url(素材/avatar.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 10px;
+} 
+.username{
+    font-size: 20px;
+    font-weight: bold;
+}
+div,ul,li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1{
+    color:#ab7ccc;
+    text-align: center;
+    position: relative;
+    top:50px;
+}
+
+.SHOW1,
+.SHOW2,
+.SHOW3,
+.SHOW4{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    position:relative;
+    margin-top: 25px;
+    position: relative;
+    bottom:120px;
+}
+/* .SHOW1{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+} */
+.show{
+    display: inline-block;
+    width: 250px;
+    height: 300px;
+    background-color: white;
+    border-radius: 20px;
+    border:1px solid rgb(140, 138, 138);
+    position: relative;
+    top:250px;
+}
+.show img{
+    margin-left: 20px;
+    margin-top: 10px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.show p{
+    position:relative;
+    margin: 10px 0 0 20px;
+}
+p:nth-child(3){
+    display: inline-block;
+    color:#fdb447;
+    font-size: 30px;
+    font-weight: 900;
+    position: relative;
+    bottom:15px;
+    left: 5px;
+}
+p:nth-last-child(2){
+    display: inline-block;
+    color:gray;
+    font-size: 12px;
+    position: relative;
+    bottom:20px;
+    right: 5px;
+}
+p:nth-child(5){
+    display: inline-block;
+    font-size: 40px;
+    position: relative;
+    bottom: 20px;
+    right:5px;
+}

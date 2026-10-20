@@ -1,0 +1,354 @@
+body{
+    margin:0;
+    padding: 0;
+    background-color: #fbf8ef;
+}
+
+.subnav{
+    display: inline-block;
+    background-color: #f2866a;
+    width:20%;
+    height: 790px;
+    float:left;
+}
+
+.myname{
+    display: inline-block;
+    width: 20%;
+    height: 100px;
+}
+.myname img{
+    position: relative;
+    left:10px;
+    top:20px;
+}
+.myname p{
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+    position: relative;
+    left: 90px;
+    bottom: 55px;
+}
+
+.dashboard,.order,.delivery,.warehouse,.report{
+    display: inline-block;
+    width: 100%;
+    height: 80px;
+}
+.dashboard:hover,
+.order:hover,
+.delivery:hover,
+.warehouse:hover,
+.report:hover{
+    background-color: #66cdd4;
+}
+.dashboard img,
+.order img,
+.warehouse img,
+.delivery img,
+.report img{
+    position: relative;
+    left: 40px;
+    top:20px;
+}
+.dashboard a,
+.order a,
+.warehouse a,
+.delivery a,
+.report a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+    left:60px;
+    top:8px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.dashboard a:hover,
+.order a:hover,
+.warehouse a:hover,
+.delivery a:hover,
+.report a:hover{
+    color: #f2866a;
+}
+
+.header{
+    float: right;
+    width: 75%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.header p:first-child{
+    color: #f2866a;
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    bottom: 40px;
+    right: 10px;
+    text-shadow: -3px -4px #b2e3e7;
+}
+#name{
+    color: #f2866a;
+    font-size: 20px;
+    display: inline-block;
+    margin-left: 10px;
+    position: relative;
+    bottom: 30px;
+}
+.header input{
+    width:250px;
+    height: 30px;
+    border-radius: 15px;
+    opacity: 0.4;
+    background-color: #faaa87;
+    border: 1px solid #faaa87;
+    position: relative;
+    bottom: 15px;
+}
+.header input::placeholder{
+    color: black;
+    font-weight: bold;
+}
+#search img{
+    position: relative;
+    bottom: 5px;
+    left: 5px;
+}
+#user img{
+    position: relative;
+    bottom: 10px;
+}
+
+.status{
+    display: inline-block;
+    float: left;
+}
+.status p,.shipment p{
+    color: #f2866a;
+    font-size: 25px;
+    position: relative;
+    left: 35px;
+}
+.status img{
+    position: relative;
+    left: 25px;
+}
+
+.shipment{
+    display: inline-block;
+    float: left;
+    position: relative;
+}
+.shipment th{
+    color: #f2866a;
+    margin-right: 30px;
+}
+table{
+    position: relative;
+    left: 30px;
+}
+
+.traffic{
+    display: inline-block;
+    position: relative;
+    left: 100px;
+}
+.traffic p{
+    color: #f2866a;
+    font-size: 25px;
+    position: relative;
+    left: 15px;
+}
+
+.tracking{
+    display: inline-block;
+    position: relative;
+    left: 160px;
+}
+.tracking p{
+    color: #f2866a;
+    font-size: 25px;
+    position: relative;
+    left: 40px;
+}
+
+.main{
+    display: inline-block;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 30px;
+    width: 75%;
+    margin-left: 2.5%;
+}
+.main p{
+    display: inline-block;
+}
+#title{
+    color: #f2866a;
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    left: 30px;
+    margin-bottom: 0;
+}
+.鍏ㄩ�墈
+    position: relative;
+    left: 6%;
+}
+.鍏ㄩ�� p{
+    color: #f2866a;
+    margin-right: 25px;
+    font-size: 20px;
+    font-weight: bold;
+}
+#select{
+    display: inline-block;
+    margin-right: 30px;
+}
+.gray{
+    background-color: #f3f1f2;
+    width: 90%;
+    height: 100px;
+    position: relative;
+    left:5%;
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+.gray input{
+    position: relative;
+    left: 20px;
+    bottom: 10px;
+}
+.gray img{
+    position: relative;
+    left: 30px;
+    top: 15px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.gray p{
+    margin-right: 60px;
+    position: relative;
+    left: 65px;
+    bottom: 10px;
+}
+#鏁伴噺{
+    margin-left: 60px;
+}
+#鍘傚晢{
+    margin-left: 60px;
+}
+.gray button{
+    background-color: #9A7CE9;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 10px;
+    border: 1px solid #9A7CE9;
+    margin-left: 20px;
+    position: relative;
+    bottom: 10px;
+    color: white;
+    text-align: center;
+}
+
+.add a{
+    text-decoration: none;
+    font-size: 70px;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #f2866a;
+    float: right;
+    position: fixed;
+    left: 85%;
+    bottom: 80px;
+}
+
+#return{
+    position: relative;
+    left: 30px;
+    top: 10px;
+}
+.main form{
+    position: relative;
+    left: 30px;
+    top: 10px;
+}
+.main form p{
+    color: #f2866a;
+    font-size: 20px;
+}
+input[type="submit"]{
+    background-color: #66cdd4;
+    color: white;
+    width: 90px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid #66cdd4;
+    border-radius: 15px;
+    font-size: 25px;
+    position: relative;
+    left: 50%;
+    top:30px;
+}
+input[type="text"]{
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    width: 400px;
+    height: 40px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.productDescription {
+    height: 44px;
+    line-height: 44px;
+    color: #f2866a;
+    font-size: 20px;
+    position: relative;
+    right: 74%;
+    top: 70px;
+}
+.productImg {
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 20px;
+} 
+.imgBiMG{
+    width: 78px;
+    height: 81px;
+    float: left;
+    display: block;
+}
+.uploadDIv {
+    width: 130px;
+    height: 120px;
+    background-color: #edf0f2;
+    font-size: 28px;
+    color: #bfbfbf;
+    text-align: center;
+    line-height: 120px;
+    float: left;
+    position: relative;
+    left: 25%;
+    bottom:30px;
+}
+.uploadDIv input {
+    width: 78px;
+    height: 78px;
+    opacity: 0;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 4;
+    padding: 0;
+}

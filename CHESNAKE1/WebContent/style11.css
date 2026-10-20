@@ -1,0 +1,583 @@
+body{
+    margin:0;
+    padding: 0;
+    background-color: #fbf8ef;
+}
+
+.subnav{
+    display: inline-block;
+    background-color: #f2866a;
+    width:20%;
+    height: 790px;
+    float:left;
+    position: fixed;
+}
+
+.myname{
+    display: inline-block;
+    width: 20%;
+    height: 100px;
+}
+.myname img{
+    position: relative;
+    left:30px;
+    top:20px;
+}
+.myname p{
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    left: 110px;
+    bottom: 55px;
+}
+
+.homepage,.order,.cart,.community,.set,.more{
+    display: inline-block;
+    width: 100%;
+    height: 80px;
+}
+.homepage:hover,
+.order:hover,
+.cart:hover,
+.community:hover,
+.set:hover,
+.more:hover{
+    background-color: #66cdd4;
+}
+.homepage img,
+.order img,
+.cart img,
+.community img,
+.set img,
+.more img{
+    position: relative;
+    left: 40px;
+    top:20px;
+}
+.homepage a,
+.order a,
+.cart a,
+.community a,
+.set a,
+.more a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+    left:60px;
+    top:8px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.homepage a:hover,
+.order a:hover,
+.cart a:hover,
+.community a:hover,
+.set a:hover,
+.more a:hover{
+    color: #f2866a;
+}
+
+.header{
+    float: right;
+    width: 75%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.header p{
+    color: #f2866a;
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    bottom: 40px;
+    right: 10px;
+    text-shadow: -3px -4px #b2e3e7;
+}
+.header input{
+    width:250px;
+    height: 30px;
+    border-radius: 15px;
+    opacity: 0.4;
+    background-color: #faaa87;
+    border: 1px solid #faaa87;
+    position: relative;
+    bottom: 15px;
+}
+.header input::placeholder{
+    color: black;
+    font-weight: bold;
+}
+.header span:nth-child(3){
+    position: relative;
+    bottom: 5px;
+}
+.header a{
+    text-decoration: none;
+}
+#M{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    width: 50px;
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 25px;
+    background-color: #9f92be;
+    position: relative;
+    bottom: 10px;
+}
+
+.personal{
+    display: inline-block;
+    width: 75%;
+    height: 350px;
+    border-radius: 30px;
+    background-color: white;
+    position: relative;
+    left:22.5%;
+    box-shadow: 0px 3px 3px #ccc;
+}
+#头像{
+    position: relative;
+    left: 50px;
+    top: 40px;
+}
+.personal span{
+    display: inline-block;
+    margin-left: 40px;
+    position: relative;
+    bottom: 180px;
+    left: 30px;
+}
+#name{
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    bottom: 65px;
+    left: 160px;
+}
+#id{
+    color: gray;
+    position: relative;
+    bottom: 85px;
+    left: 160px;
+}
+.personal span p{
+    color: #f2866a;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    bottom: 10px;
+    margin-bottom: 0;
+}
+#购物车空空{
+    position: relative;
+    left: 30%;
+    bottom: 170px;
+}
+
+#post{
+    color: #f2866a;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    position: relative;
+    left: 23%;
+    bottom: 100px;
+}
+.SHOW1{
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    left: 20%;
+}
+.SHOW2{
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    left: 20%;
+    bottom: 80px;
+}
+.show{
+    height: 350px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-left: 40px;
+}
+.show img:first-child{
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin: 20px 30px 0 30px;
+}
+#touxiang,#user,#like{
+    display: inline-block;
+}
+#touxiang{
+    width: 40px;
+    height: 40px;
+    background-color: #9f92be;
+    border: 1px solid #9f92be;
+    border-radius: 20px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 40px;
+    text-align: center;
+}
+.show p:nth-child(2){
+    font-size: 20px;
+    color: #565654;
+    font-weight: bold;
+    position: relative;
+    left: 20px;
+    top: 10px;
+    margin: 0;
+}
+#touxiang{
+    position: relative;
+    left: 20px;
+    top: 10px;
+}
+#user{
+    color: #ccc;
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+    left: 30px;
+    top: 15px;
+}
+#like{
+    position: relative;
+    left: 70px;
+    top: 20px;
+}
+
+.delete{
+    position: relative;
+    left: 70px;
+    top: 10px;
+    background-color:#FF0000;
+    border:1px solid #FF0000;
+    color:#fff;
+    border-radius: 10px;
+}
+
+.follower{
+    width: 75%;
+    height: 100px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    position: relative;
+    top: 80px;
+    left: 22.5%;
+}
+#follower{
+    position: relative;
+    top: 15px;
+    left: 20px;
+}
+#more{
+    position: relative;
+    bottom: 55px;
+    left: 88%;
+}
+
+.upload{
+    background-color: #66cdd4;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #66cdd4;
+    border-radius: 40px;
+    line-height: 70px;
+    text-align: center;
+    position: fixed;
+    top: 88%;
+    left: 90%;
+}
+.upload a{
+    font-size: 70px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.main{
+    background-color: white;
+    width: 70%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    float: right;
+    margin-right: 5%;
+    position: relative;
+    top: 20px;
+}
+#back{
+    position: relative;
+    left: 25px;
+    top: 5px;
+}
+#Back{
+    display: inline-block;
+    color: #f2866a;
+    font-size: 25px;
+    position: relative;
+    left: 40px;
+}
+input[type="submit"]{
+    background-color: #66cdd4;
+    color: white;
+    width: 100px;
+    height: 40px;
+    border: 1px solid #66cdd4;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 25px;
+    position: relative;
+    left: 85%;
+    bottom: 60px;
+}
+.uploadDIv {
+    width: 330px;
+    height: 250px;
+    background-color: white;
+    font-size: 100px;
+    color: #bfbfbf;
+    text-align: center;
+    line-height: 230px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    position: relative;
+    left: 30%;
+    bottom: 30px;
+}
+.uploadDIv p{
+    font-size: 20px;
+    position: relative;
+    bottom: 180px;
+}
+.uploadDIv input {
+    width: 300px;
+    height: 250px;
+    opacity: 0;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 4;
+    padding: 0;
+}
+
+.yourpost{
+    width: 90%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    background-color: white;
+    float: right;
+    margin-right: 5%;
+    margin-bottom: 20px;
+}
+.yourpost input[type="text"]{
+    border: none;
+    width: 90%;
+    height: 50px;
+    position: relative;
+    top: 5px;
+    left: 3%;
+}
+.yourpost input::placeholder{
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+}
+textarea{
+    border: none;
+    position: relative;
+    left: 10px;
+    top: 5px;
+    margin-bottom: 15px;
+}
+textarea::placeholder{
+    color: black;
+    font-size: 15px;
+    position: relative;
+    left: 5px;
+}
+
+.username img{
+    position: relative;
+    left: 20px;
+    bottom: 20px;
+}
+.username p{
+    display: inline-block;
+    font-size: 25px;
+    color: #565654;
+    font-weight: bold;
+    position: relative;
+    left: 30px;
+    bottom: 45px;
+}
+
+/* 多图展示 */
+/*首先准备一个放图片的容器*/
+.container{
+    width: 70%;
+    height: 400px;
+    position: relative;
+    left: 15%;
+    bottom: 60px;
+}
+/*图片样式*/
+.container img{
+    position: absolute;        /*把所有图片放在同一个位置*/
+    width: 100%;
+    height: 100%;
+    transition-duration: 0.5s;    /*设置过渡时间*/
+    opacity: 0;                /*把所有图片变透明*/
+}
+/*图片显示开关*/
+.container img.on{
+    opacity: 1;                /*用于显示图片*/
+}
+/*左右按钮 按钮用图片更好点,这里为了简便就用大于小于号*/
+.left, .right{
+    position: absolute;
+    top: 0;
+    width: 60px;
+    height: 100%;
+    line-height: 400px;
+    background-color: white;
+    opacity: 0.5;
+    text-align: center;
+    font-size: 60px;
+    color: #ccc;
+    display: none;    /*先隐藏按钮*/
+    cursor: pointer;    /*设置鼠标悬停时的样式*/
+}
+.left{
+    left: 0;
+}
+.right{
+    right: 0;
+}
+.container:hover .left, .container:hover .right{
+    display: block;            /*鼠标悬停才容器范围内时显示按钮*/
+}
+.left:hover, .right:hover{
+    color: #565654;
+}
+
+#title{
+    font-size: 30px;
+    font-weight: bold;
+    color: #565654;
+    position: relative;
+    left: 30px;
+    bottom: 60px;
+    margin: 0;
+}
+#content{
+    font-size: 20px;
+    color: #565654;
+    position: relative;
+    left: 30px;
+    bottom: 50px;
+    margin: 0;
+    display: inline-block;
+}
+.tubiao{
+    display: inline-block;
+    position: relative;
+    left: 65%;
+    bottom: 40px;
+}
+.tubiao img{
+    margin-left: 20px;
+}
+
+hr{
+    position: relative;
+    bottom: 30px;
+}
+#comment{
+    color: #565654;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    position: relative;
+    left: 30px;
+    bottom: 20px;
+}
+.comment{
+    width: 90%;
+    height: 80px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    margin: auto;
+}
+.circle1{
+    background-color: #f2866a;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    position: relative;
+    top: 15px;
+    left: 20px;
+}
+.comment #grey{
+    display: inline-block;
+    color: grey;
+    font-size: 20px;
+    position: relative;
+    left: 80px;
+    bottom: 60px;
+}
+.comment #black{
+    font-size: 25px;
+    position: relative;
+    left: 80px;
+    bottom: 100px;
+}
+.reply{
+    width: 80%;
+    height: 70px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 35px;
+    margin: 10px 10% 20px 10%;
+}
+.circle2{
+    background-color: #faaa87;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    position: relative;
+    top: 15px;
+    left: 20px;
+}
+.reply #black{
+    font-size: 25px;
+    display: inline-block;
+    position: relative;
+    left: 70px;
+    bottom: 45px;
+}
+.reply #grey{
+    color: grey;
+    font-size: 25px;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    bottom: 50px;
+}

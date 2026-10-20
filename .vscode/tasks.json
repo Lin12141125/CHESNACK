@@ -1,0 +1,167 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "后端: 编译",
+			"type": "shell",
+			"command": "call",
+			"args": [
+				"D:\\DownLoad\\chesnake-deploy\\backend-build.cmd",
+				"${workspaceFolder}\\CHESNAKE1\\backend",
+				"compile"
+			],
+			"problemMatcher": [],
+			"presentation": {
+				"reveal": "always",
+				"panel": "shared"
+			}
+		},
+		{
+			"label": "后端: 启动 (8081)",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Start-Process -FilePath 'cmd.exe' -ArgumentList '/c','D:\\DownLoad\\chesnake-deploy\\backend-run.cmd ${workspaceFolder}\\CHESNAKE1\\backend > D:\\DownLoad\\chesnake-deploy\\backend.log 2>&1' -WindowStyle Hidden; Write-Output 'backend starting, log: D:\\DownLoad\\chesnake-deploy\\backend.log'"
+			],
+			"problemMatcher": [],
+			"presentation": {
+				"reveal": "always",
+				"panel": "shared"
+			}
+		},
+		{
+			"label": "前端: 安装依赖",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"cd /d \"${workspaceFolder}\\CHESNAKE1\\frontend\" && npm install"
+			],
+			"problemMatcher": [],
+			"presentation": {
+				"reveal": "always",
+				"panel": "shared"
+			}
+		},
+		{
+			"label": "前端: 启动 (5173)",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Start-Process -FilePath 'cmd.exe' -ArgumentList '/c','cd /d ${workspaceFolder}\\CHESNAKE1\\frontend && npm run dev > D:\\DownLoad\\chesnake-deploy\\frontend.log 2>&1' -WindowStyle Hidden; Write-Output 'frontend starting, log: D:\\DownLoad\\chesnake-deploy\\frontend.log'"
+			],
+			"problemMatcher": [],
+			"presentation": {
+				"reveal": "always",
+				"panel": "shared"
+			}
+		},
+		{
+			"label": "旧版: 构建部署 JSP 版",
+			"type": "shell",
+			"command": "call",
+			"args": [
+				"D:\\DownLoad\\chesnake-deploy\\build2.cmd",
+				"${workspaceFolder}\\CHESNAKE1"
+			],
+			"problemMatcher": [],
+			"presentation": {
+				"reveal": "always",
+				"panel": "shared"
+			}
+		},
+		{
+			"label": "旧版: 启动 Tomcat",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Start-Process -FilePath 'cmd.exe' -ArgumentList '/c','D:\\DownLoad\\chesnake-deploy\\start.cmd > D:\\DownLoad\\chesnake-deploy\\tomcat.log 2>&1' -WindowStyle Hidden; Write-Output 'Tomcat started'"
+			],
+			"problemMatcher": [],
+			"presentation": {
+				"reveal": "always",
+				"panel": "shared"
+			}
+		},
+		{
+			"label": "旧版: 停止 Tomcat",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"call D:\\DownLoad\\chesnake-deploy\\stop.cmd"
+			],
+			"problemMatcher": [],
+			"presentation": {
+				"reveal": "always",
+				"panel": "shared"
+			}
+		},
+		{
+			"label": "final-notify",
+			"type": "shell",
+			"command": "mysqlsh --sql --host=localhost --user=root --password=lyzhmlzq1217. --execute=\"SELECT id, email, title FROM chesnake.notification ORDER BY id;\" 2>nul"
+		},
+		{
+			"label": "compile-fix",
+			"type": "shell",
+			"command": "call D:\\DownLoad\\chesnake-deploy\\backend-build.cmd \"e:\\LinCom\\大三上\\团队项目\\项目实现\\8-GQ\\CHESNAKE1\\backend\" compile"
+		},
+		{
+			"label": "restart-fix",
+			"type": "shell",
+			"command": "for /f \"tokens=5\" %a in ('netstat -ano ^| findstr \":8081.*LISTENING\"') do taskkill /f /pid %a >nul 2>nul & powershell -NoProfile -Command \"Start-Process -FilePath 'cmd.exe' -ArgumentList '/c','D:\\DownLoad\\chesnake-deploy\\backend-run.cmd e:\\LinCom\\大三上\\团队项目\\项目实现\\8-GQ\\CHESNAKE1\\backend > D:\\DownLoad\\chesnake-deploy\\backend.log 2>&1' -WindowStyle Hidden; Write-Output 'BACKEND-RESTARTING'\""
+		},
+		{
+			"label": "delete-old-queues",
+			"type": "shell",
+			"command": "docker exec chesnake-rabbitmq rabbitmqctl delete_queue chesnake.order.pay.queue & docker exec chesnake-rabbitmq rabbitmqctl delete_queue chesnake.notify.queue & docker exec chesnake-rabbitmq rabbitmqctl delete_queue chesnake.community.event.queue & docker exec chesnake-rabbitmq rabbitmqctl delete_queue chesnake.audit.log.queue & echo QUEUES-DELETED"
+		},
+		{
+			"label": "startup-check",
+			"type": "shell",
+			"command": "powershell -NoProfile -Command \"Get-Content 'D:\\DownLoad\\chesnake-deploy\\backend.log' -Tail 20 | Select-String -Pattern 'Started|ERROR|APPLICATION FAILED|inequivalent' | ForEach-Object { $_.Line }\""
+		},
+		{
+			"label": "queue-state",
+			"type": "shell",
+			"command": "docker exec chesnake-rabbitmq rabbitmqctl list_queues name arguments & powershell -NoProfile -Command \"Get-Content 'D:\\DownLoad\\chesnake-deploy\\backend.log' -Tail 8 | Select-String -Pattern 'PRECONDITION|ERROR' | ForEach-Object { $_.Line }\""
+		},
+		{
+			"label": "sec-tests",
+			"type": "shell",
+			"command": "powershell -NoProfile -Command \"$h=@{'Content-Type'='application/json'}; Invoke-RestMethod -Uri 'http://localhost:8081/api/auth/register' -Method Post -Headers $h -Body '{\\\"email\\\":\\\"eviladmin@qq.com\\\",\\\"username\\\":\\\"Evil\\\",\\\"password\\\":\\\"123456\\\",\\\"role\\\":1}' | Out-Null; $r=Invoke-RestMethod -Uri 'http://localhost:8081/api/auth/login' -Method Post -Headers $h -Body '{\\\"email\\\":\\\"newuser@qq.com\\\",\\\"password\\\":\\\"123456\\\",\\\"role\\\":2}'; $t=$r.data.token; Invoke-WebRequest -Uri 'http://localhost:8081/api/auth/logout' -Method Post -Headers @{Authorization='Bearer '+$t} -UseBasicParsing | Out-Null; try { Invoke-WebRequest -Uri 'http://localhost:8081/api/auth/me' -Headers @{Authorization='Bearer '+$t} -UseBasicParsing | Out-Null; Write-Output 'LOGOUT-FAIL-REQ-PASSED' } catch { Write-Output 'LOGOUT-BLACKLIST-OK' }; $a=Invoke-RestMethod -Uri 'http://localhost:8081/api/auth/login' -Method Post -Headers $h -Body '{\\\"email\\\":\\\"admin2@qq.com\\\",\\\"password\\\":\\\"admin123\\\",\\\"role\\\":1}'; $at=$a.data.token; try { Invoke-RestMethod -Uri 'http://localhost:8081/api/comment' -Method Post -Headers @{'Content-Type'='application/json';'Authorization'='Bearer '+$at} -Body '{\\\"orderId\\\":1,\\\"content\\\":\\\"hack\\\",\\\"level\\\":5}' | Out-Null; Write-Output 'OWNERSHIP-FAIL' } catch { Write-Output ('OWNERSHIP-OK: ' + $_.Exception.Message) }\""
+		},
+		{
+			"label": "debug-blacklist",
+			"type": "shell",
+			"command": "powershell -NoProfile -Command \"$h=@{'Content-Type'='application/json'}; $r=Invoke-RestMethod -Uri 'http://localhost:8081/api/auth/login' -Method Post -Headers $h -Body '{\\\"email\\\":\\\"newuser@qq.com\\\",\\\"password\\\":\\\"123456\\\",\\\"role\\\":2}'; $t=$r.data.token; $lo=Invoke-WebRequest -Uri 'http://localhost:8081/api/auth/logout' -Method Post -Headers @{Authorization='Bearer '+$t} -UseBasicParsing; Write-Output ('LOGOUT=' + $lo.Content); $keys = docker exec chesnake-redis redis-cli -a chesnake123 keys 'auth:blacklist:*' 2>$null; Write-Output ('BLACKLIST-KEYS=' + $keys); try { $me=Invoke-WebRequest -Uri 'http://localhost:8081/api/auth/me' -Headers @{Authorization='Bearer '+$t} -UseBasicParsing; Write-Output ('ME=' + $me.Content) } catch { Write-Output 'ME-401' }\""
+		},
+		{
+			"label": "sec-tests2",
+			"type": "shell",
+			"command": "powershell -NoProfile -Command \"$h=@{'Content-Type'='application/json'}; $a=Invoke-RestMethod -Uri 'http://localhost:8081/api/auth/login' -Method Post -Headers $h -Body '{\\\"email\\\":\\\"admin2@qq.com\\\",\\\"password\\\":\\\"admin123\\\",\\\"role\\\":1}'; $at=$a.data.token; $c=Invoke-RestMethod -Uri 'http://localhost:8081/api/comment' -Method Post -Headers @{'Content-Type'='application/json';'Authorization'='Bearer '+$at} -Body '{\\\"orderId\\\":1,\\\"content\\\":\\\"hack\\\",\\\"level\\\":5}'; Write-Output ('OWNERSHIP=' + $c.msg + ' code=' + $c.code); $me=Invoke-RestMethod -Uri 'http://localhost:8081/api/auth/me' -Headers @{Authorization='Bearer '+$at}; Write-Output ('ME-ADMIN2=' + $me.code + ' ' + $me.msg)\" & mysqlsh --sql --host=localhost --user=root --password=lyzhmlzq1217. --execute=\"SELECT email, role FROM chesnake.user WHERE email='eviladmin@qq.com';\" 2>nul"
+		},
+		{
+			"label": "cache-consistency",
+			"type": "shell",
+			"command": "powershell -NoProfile -Command \"$h=@{'Content-Type'='application/json'}; $r=Invoke-RestMethod -Uri 'http://localhost:8081/api/auth/login' -Method Post -Headers $h -Body '{\\\"email\\\":\\\"newuser@qq.com\\\",\\\"password\\\":\\\"123456\\\",\\\"role\\\":2}'; $t=$r.data.token; $auth=@{'Content-Type'='application/json';'Authorization'='Bearer '+$t}; Invoke-RestMethod -Uri 'http://localhost:8081/api/cart' -Method Post -Headers $auth -Body '{\\\"goodId\\\":39,\\\"amount\\\":1}' | Out-Null; Invoke-WebRequest -Uri 'http://localhost:8081/api/goods/39' -Headers $auth -UseBasicParsing | Out-Null; $d1 = docker exec chesnake-redis redis-cli -a chesnake123 exists cache:goods:detail:39 2>$null; Write-Output ('DETAIL-CACHE-BEFORE=' + $d1); Invoke-RestMethod -Uri 'http://localhost:8081/api/order/pay' -Method Post -Headers $auth -Body '{\\\"goodIds\\\":[39]}' | Out-Null; Start-Sleep -Seconds 2; $d2 = docker exec chesnake-redis redis-cli -a chesnake123 exists cache:goods:detail:39 2>$null; $l = docker exec chesnake-redis redis-cli -a chesnake123 keys 'cache:goods:list:*' 2>$null; Write-Output ('DETAIL-CACHE-AFTER=' + $d2); Write-Output ('LIST-CACHE-AFTER=' + $l)\""
+		},
+		{
+			"label": "vo-cache-check",
+			"type": "shell",
+			"command": "powershell -NoProfile -Command \"$h=@{'Content-Type'='application/json'}; $r=Invoke-RestMethod -Uri 'http://localhost:8081/api/auth/login' -Method Post -Headers $h -Body '{\\\"email\\\":\\\"newuser@qq.com\\\",\\\"password\\\":\\\"123456\\\",\\\"role\\\":2}'; $t=$r.data.token; $auth=@{'Content-Type'='application/json';'Authorization'='Bearer '+$t}; $o=Invoke-RestMethod -Uri 'http://localhost:8081/api/order' -Headers $auth; Write-Output ('ORDER-VO=' + ($o.data.records[0] | ConvertTo-Json -Compress)); Invoke-WebRequest -Uri 'http://localhost:8081/api/goods?page=1&size=5' -Headers $auth -UseBasicParsing | Out-Null; $v = docker exec chesnake-redis redis-cli -a chesnake123 get 'cache:goods:list:||||score|desc|1|5' 2>$null; Write-Output ('LIST-CACHE-PREFIX=' + $v.Substring(0, [Math]::Min(60, $v.Length)))\""
+		},
+		{
+			"label": "breakdown-regression",
+			"type": "shell",
+			"command": "powershell -NoProfile -Command \"$r = Invoke-RestMethod -Uri 'http://localhost:8081/api/auth/login' -Method Post -ContentType 'application/json' -Body '{\\\"email\\\":\\\"newuser@qq.com\\\",\\\"password\\\":\\\"123456\\\",\\\"role\\\":2}'; $t = $r.data.token; docker exec chesnake-redis redis-cli -a chesnake123 del cache:goods:detail:40 2>$null | Out-Null; 1..10 | ForEach-Object { Start-Job -ScriptBlock { param($tk) curl.exe -sS -o NUL -H ('Authorization: Bearer ' + $tk) http://localhost:8081/api/goods/40 } -ArgumentList $t } | Out-Null; Get-Job | Wait-Job | Out-Null; Get-Job | Remove-Job; Start-Sleep -Seconds 1; $log = Get-Content 'D:\\DownLoad\\chesnake-deploy\\backend.log' -Raw; $n = ([regex]::Matches($log, 'Parameters: 40')).Count; Write-Output ('CONCURRENT-10-DB-QUERIES=' + $n); $lock = docker exec chesnake-redis redis-cli -a chesnake123 keys 'lock:goods:*' 2>$null; Write-Output ('LOCK-REMAINED=' + $lock)\""
+		}
+	]
+}

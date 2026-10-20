@@ -1,0 +1,33 @@
+# ===== 敏感配置（含密码/密钥，禁止提交）=====
+.env
+*.env.local
+
+# ===== Node / 前端 =====
+node_modules/
+dist/
+dist-ssr/
+
+# ===== Java / Maven 构建产物 =====
+target/
+*.class
+CHESNAKE1/build/
+
+# ===== 运行时上传目录 =====
+CHESNAKE1/backend/uploads/
+CHESNAKE1/WebContent/images/upload/
+
+# ===== IDE =====
+.classpath
+.project
+.settings/
+.idea/
+*.iml
+bin/
+
+# ===== 日志 =====
+*.log
+logs/
+
+# ===== 系统文件 =====
+Thumbs.db
+.DS_Store

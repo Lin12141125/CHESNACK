@@ -1,0 +1,389 @@
+body{
+    margin:0;
+    padding: 0;
+    background-color: #fbf8ef;
+}
+
+.subnav{
+    display: inline-block;
+    background-color: #f2866a;
+    width:20%;
+    height: 790px;
+    float:left;
+}
+
+.myname{
+    display: inline-block;
+    width: 20%;
+    height: 100px;
+}
+.myname img{
+    position: relative;
+    left:30px;
+    top:20px;
+}
+.myname p{
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    left: 110px;
+    bottom: 55px;
+}
+
+.homepage,.order,.cart,.community,.set,.more{
+    display: inline-block;
+    width: 100%;
+    height: 80px;
+}
+.homepage:hover,
+.order:hover,
+.cart:hover,
+.community:hover,
+.set:hover,
+.more:hover{
+    background-color: #66cdd4;
+}
+.homepage img,
+.order img,
+.cart img,
+.community img,
+.set img,
+.more img{
+    position: relative;
+    left: 30px;
+    top:20px;
+}
+.homepage a,
+.order a,
+.cart a,
+.community a,
+.set a,
+.more a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+    left:50px;
+    top:8px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.homepage a:hover,
+.order a:hover,
+.cart a:hover,
+.community a:hover,
+.set a:hover,
+.more a:hover{
+    color: #f2866a;
+}
+
+.header{
+    float: right;
+    width: 75%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.header p{
+    color: #f2866a;
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    bottom: 40px;
+    right: 10px;
+    text-shadow: -3px -4px #b2e3e7;
+}
+.header input{
+    width:250px;
+    height: 30px;
+    border-radius: 15px;
+    opacity: 0.4;
+    background-color: #faaa87;
+    border: 1px solid #faaa87;
+    position: relative;
+    bottom: 5px;
+}
+.header input::placeholder{
+    color: black;
+    font-weight: bold;
+}
+.header span:nth-child(3){
+    position: relative;
+    bottom: 5px;
+}
+
+.图标 img{
+    bottom: 5px;
+    margin-right: 10px;
+}
+
+.info{
+    display: inline-block;
+    width: 350px;
+    height: 220px;
+    border-radius: 30px;
+    border: 1px solid white;
+    background-color: white;
+    position: relative;
+    left:20px;
+    bottom: 160px;
+    box-shadow: 0px 3px 3px #ccc;
+}
+.info p{
+    color: #f2866a;
+    position: relative;
+    bottom: 20px;
+    right: 8px;
+    font-weight: bold;
+}
+#touxiang{
+    position: relative;
+    left: 140px;
+    top:40px;
+}
+.快递情况{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    left: 10px;
+    top: 60px;
+}
+
+.record{
+    display: inline-block;
+    float: left;
+    position: relative;
+    left:20px;
+    bottom:150px;
+}
+.record h1{
+    color: #f2866a;
+    text-shadow: -3px -4px #b2e3e7;
+}
+.record a{
+    text-decoration: none;
+    color: #f2866a;
+    font-size: 20px;
+    margin-left: 25px;
+    position: relative;
+    left: 50px;
+    bottom: 10px;
+}
+.record a:hover{
+    text-decoration: underline;
+}
+
+.date{
+    position: relative;
+    left:20px;
+    color: #ccc;
+}
+tr{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.goods{
+    position: relative;
+    left:20px;
+}
+.goods p{
+    position: relative;
+    left:50px;
+    bottom: 50px;
+    margin: 0;
+}
+.goods img{
+    border-radius: 10px;
+}
+.price{
+    position: relative;
+    left: 100px;
+    bottom: 35px;
+}
+
+.vip{
+    display: inline-block;
+    width: 500px;
+    height: 220px;
+    border-radius: 30px;
+    border: 1px solid #faaa87;
+    background-color: #faaa87;
+    position: relative;
+    left: 60px;
+    box-shadow: 0px 3px 3px #ccc;
+}
+.text{
+    display: inline-block;
+}
+.text p{
+    color: white;
+}
+#vip{
+    position: relative;
+    left:60px;
+    bottom: 30px;
+    font-size: 60px;
+    font-weight: bold;
+    text-shadow: -10px -10px #f0876a;
+}
+#enjoy{
+    position: relative;
+    left:50px;
+    bottom: 90px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.vip img{
+    position: relative;
+    left:80px;
+    bottom: 50px;
+}
+.text button{
+    position: relative;
+    left:70px;
+    bottom: 90px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #9f92be;
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #9f92be;
+    border-radius: 15px;
+}
+
+.report{
+    display: inline-block;
+    position: relative;
+    left:160px;
+    bottom: 20px;
+}
+.report h1{
+    position: relative;
+    top: 50px;
+    color: #f2866a;
+    text-shadow: -3px -4px #b2e3e7;
+}
+.card,.diagram{
+    display: inline-block;
+}
+.card p{
+    font-size: 15px;
+    color: #f2866a;
+    position: relative;
+    top: 30px;
+}
+.建行,.农行,.工行{
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #66cdd4;
+    position: relative;
+    left:60px;
+
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 5px;
+}
+.diagram img{
+    position: relative;
+    left:100px;
+    top:10px;
+}
+.color{
+    display: inline-block;
+    position: relative;
+    left:130px;
+    top:10px;
+}
+.color p{
+    display: inline-block;
+}
+.orange,.blue,.purple{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    /* display: inline-block; */
+}
+
+.orange{
+    background-color: #faaa87;
+}
+.blue{
+    background-color: #66cdd4;
+}
+.purple{
+    background-color: #9f92be;
+}
+.report:last-child{
+    position: relative;
+    bottom: 200px;
+    right:200px;
+}
+
+.myorder,.main{
+    display: inline-block;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 30px;
+    width: 75%;
+    position: relative;
+    left: 2.5%;
+}
+.表头,.details{
+    display: flex;
+    justify-content: space-around;
+}
+.表头 p{
+    color: #f2866a;
+    font-size: 20px;
+    font-weight: bold;
+}
+.main p,.加,.减,.数{
+    display: inline-block;
+}
+
+.第一排 button{
+    border-radius: 20px;
+    position: relative;
+    left: 50%;
+    border: 1px solid #f2866a;
+}
+
+.gray{
+    background-color: #f3f1f2;
+    width: 90%;
+    position: relative;
+    left:5%;
+    border-radius: 20px;
+    margin-top: 5px;
+}
+.减{
+    background-color: #f2866a;
+    border-radius: 10px 0 0 10px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+.数{
+    background-color: white;
+    width: 35px;
+    height: 20px;
+    text-align: center;
+}
+.加{
+    background-color: #f2866a;
+    border-radius: 0 10px 10px 0;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+.全选,.商家{
+    position: relative;
+    left: 2%;
+}
+
+

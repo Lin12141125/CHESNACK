@@ -1,0 +1,69 @@
+server:
+  port: ${SERVER_PORT:8081}
+
+spring:
+  application:
+    name: chesnake-backend
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${DB_URL:jdbc:mysql://localhost:3306/chesnake?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=utf8&allowPublicKeyRetrieval=true}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:lyzhmlzq1217.}
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:chesnake123}
+      timeout: 3s
+  rabbitmq:
+    host: ${RABBITMQ_HOST:localhost}
+    port: ${RABBITMQ_PORT:5672}
+    username: ${RABBITMQ_USERNAME:chesnake}
+    password: ${RABBITMQ_PASSWORD:chesnake123}
+    # 生产者可靠性：Confirm 确认模式 + 不可路由回退
+    publisher-confirm-type: correlated
+    publisher-returns: true
+    listener:
+      simple:
+        # 手动 Ack：业务事务提交成功才确认，失败 Nack 进死信队列
+        acknowledge-mode: manual
+        prefetch: 50
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+chesnake:
+  jwt:
+    # HS256 密钥(>=32字节)
+    secret: ${JWT_SECRET:chesnake-jwt-secret-key-please-change-in-prod-2026-abcdef}
+    expire-minutes: 120
+  upload-dir: uploads
+  seckill:
+    # 秒杀信号量：同时在途下单请求上限（与 Sentinel QPS 限流互补）
+    max-concurrent: 200
+  elasticsearch:
+    # 商品全文搜索；不可用时自动降级 MySQL LIKE
+    enabled: ${ES_ENABLED:true}
+    hosts: ${ES_HOSTS:http://localhost:9200}
+  sentinel:
+    # Sentinel 客户端暴露端口（本地调试/控制台连接）
+    api-port: 8719
+
+logging:
+  level:
+    com.chesnake: debug
