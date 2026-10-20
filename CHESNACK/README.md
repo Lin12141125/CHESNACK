@@ -1,12 +1,12 @@
-# 🐍 CHESNAKE 宠物蛇商城
+# CHESNACK 零食商城
 
-> 面向爬宠爱好者的宠物蛇主题电商平台。前后端分离架构，集高并发秒杀、消息可靠性保障、三级缓存防护、全文搜索与实时通知于一体。
+> 休闲零食主题电商平台。前后端分离架构，集高并发秒杀、消息可靠性保障、三级缓存防护、全文搜索与实时通知于一体。
 >
-> 说明：本目录(`CHESNAKE1`)为重构版（前后端分离）代码，仓库根目录 `README.md` 为本项目总览文档，内容与本文一致。
+> 说明：本目录(`CHESNACK`)为重构版（前后端分离）代码，仓库根目录 `README.md` 为本项目总览文档，内容与本文一致。
 
 ## 项目简介
 
-CHESNAKE 是一个宠物蛇主题的 B2C 电商平台，涵盖商品浏览与搜索、购物车、下单支付、订单管理、评价、社区（发帖/评论/关注/上传）、站内实时通知与管理员后台等完整业务闭环。
+CHESNACK 是一个休闲零食主题的 B2C 电商平台，涵盖辣条、面包、饼干、巧克力、坚果等休闲零食的商品浏览与搜索、购物车、下单支付、订单管理、评价、社区（发帖/评论/关注/上传）、站内实时通知与管理员后台等完整业务闭环。
 
 项目采用 **Vue3 + Spring Boot** 前后端分离架构，配套 MySQL、Redis、RabbitMQ、Elasticsearch 四大中间件，支持 Docker Compose 一键部署。旧版 JSP + Servlet 实现保留在 `src/` 与 `WebContent/`，作为演进参考。
 
@@ -81,8 +81,8 @@ CHESNAKE 是一个宠物蛇主题的 B2C 电商平台，涵盖商品浏览与搜
 ## 目录结构
 
 ```
-CHESNAKE（仓库根）
-├── CHESNAKE1/                 # 重构版（前后端分离）★ 本目录
+CHESNACK（仓库根）
+├── CHESNACK/                  # 重构版（前后端分离）★ 本目录
 │   ├── backend/               # Spring Boot 后端（Controller-Service-Mapper 三层）
 │   ├── frontend/              # Vue3 前端
 │   ├── docker-compose.yml     # 六服务一键编排
@@ -98,7 +98,7 @@ CHESNAKE（仓库根）
 
 ### 方式一：Docker Compose 一键部署（推荐）
 
-1. 进入 `CHESNAKE1` 目录
+1. 进入 `CHESNACK` 目录
 2. 复制 `.env.example` 为 `.env`，按需修改数据库/Redis 等密码
 3. `docker compose up -d --build`
 4. 访问 `http://localhost`（前端 Nginx）；后端 API 位于 `http://localhost:8081`；MySQL 映射到宿主 3307

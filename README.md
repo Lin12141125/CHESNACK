@@ -1,12 +1,12 @@
-# 🐍 CHESNAKE 宠物蛇商城
+# CHESNACK 零食商城
 
-> 面向爬宠爱好者的宠物蛇主题电商平台。前后端分离架构,集高并发秒杀、消息可靠性保障、三级缓存防护、全文搜索与实时通知于一体。
+> 休闲零食主题电商平台。前后端分离架构,集高并发秒杀、消息可靠性保障、三级缓存防护、全文搜索与实时通知于一体。
 
 ## 项目简介
 
-CHESNAKE 是一个宠物蛇主题的 B2C 电商平台,涵盖商品浏览与搜索、购物车、下单支付、订单管理、评价、社区(发帖/评论/关注/上传)、站内实时通知与管理员后台等完整业务闭环。
+CHESNACK 是一个休闲零食主题的 B2C 电商平台,涵盖辣条、面包、饼干、巧克力、坚果等休闲零食的商品浏览与搜索、购物车、下单支付、订单管理、评价、社区(发帖/评论/关注/上传)、站内实时通知与管理员后台等完整业务闭环。
 
-项目采用 **Vue3 + Spring Boot** 前后端分离架构,配套 MySQL、Redis、RabbitMQ、Elasticsearch 四大中间件,支持 Docker Compose 一键部署。旧版 JSP + Servlet 实现保留在 `CHESNAKE1/src` 与 `CHESNAKE1/WebContent`,作为演进参考。
+项目采用 **Vue3 + Spring Boot** 前后端分离架构,配套 MySQL、Redis、RabbitMQ、Elasticsearch 四大中间件,支持 Docker Compose 一键部署。旧版 JSP + Servlet 实现保留在 `CHESNACK/src` 与 `CHESNACK/WebContent`,作为演进参考。
 
 ### 主要功能
 
@@ -79,8 +79,8 @@ CHESNAKE 是一个宠物蛇主题的 B2C 电商平台,涵盖商品浏览与搜�
 ## 目录结构
 
 ```
-CHESNAKE(仓库根)
-├── CHESNAKE1/                 # 重构版(前后端分离)
+CHESNACK(仓库根)
+├── CHESNACK/                  # 重构版(前后端分离)
 │   ├── backend/               # Spring Boot 后端(Controller-Service-Mapper 三层)
 │   ├── frontend/              # Vue3 前端
 │   ├── docker-compose.yml     # 六服务一键编排
@@ -96,7 +96,7 @@ CHESNAKE(仓库根)
 
 ### 方式一:Docker Compose 一键部署(推荐)
 
-1. `cd CHESNAKE1`
+1. `cd CHESNACK`
 2. 复制 `.env.example` 为 `.env`,按需修改数据库/Redis 等密码
 3. `docker compose up -d --build`
 4. 访问 `http://localhost`(前端 Nginx);后端 API 位于 `http://localhost:8081`;MySQL 映射到宿主 3307
@@ -109,8 +109,8 @@ CHESNAKE(仓库根)
 2. **Redis**:`docker run -d --name chesnake-redis -p 6379:6379 redis:7-alpine --requirepass chesnake123`
 3. **RabbitMQ**:`docker run -d --name chesnake-rabbitmq -p 5672:5672 -p 15672:15672 -e RABBITMQ_DEFAULT_USER=chesnake -e RABBITMQ_DEFAULT_PASS=chesnake123 rabbitmq:3-management`
 4. **Elasticsearch(可选)**:`docker run -d --name chesnake-es -p 9200:9200 -e "discovery.type=single-node" -e "xpack.security.enabled=false" docker.elastic.co/elasticsearch/elasticsearch:8.19.0`
-5. **后端**:`cd CHESNAKE1/backend && mvn spring-boot:run`(8081)
-6. **前端**:`cd CHESNAKE1/frontend && npm install && npm run dev`(5173,已代理 /api、/uploads、/ws 到 8081)
+5. **后端**:`cd CHESNACK/backend && mvn spring-boot:run`(8081)
+6. **前端**:`cd CHESNACK/frontend && npm install && npm run dev`(5173,已代理 /api、/uploads、/ws 到 8081)
 7. 访问 `http://localhost:5173`
 
 ## API 约定
@@ -130,4 +130,4 @@ CHESNAKE(仓库根)
 
 ## 单元测试
 
-覆盖秒杀库存 Lua 预扣、消费幂等、搜索降级、JWT 黑名单等核心场景(`CHESNAKE1/backend/src/test`)。
+覆盖秒杀库存 Lua 预扣、消费幂等、搜索降级、JWT 黑名单等核心场景(`CHESNACK/backend/src/test`)。

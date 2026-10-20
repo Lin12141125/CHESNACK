@@ -10,11 +10,11 @@ dist-ssr/
 # ===== Java / Maven 构建产物 =====
 target/
 *.class
-CHESNAKE1/build/
+CHESNACK/build/
 
 # ===== 运行时上传目录 =====
-CHESNAKE1/backend/uploads/
-CHESNAKE1/WebContent/images/upload/
+CHESNACK/backend/uploads/
+CHESNACK/WebContent/images/upload/
 
 # ===== IDE =====
 .classpath

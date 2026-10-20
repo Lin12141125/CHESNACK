@@ -2,7 +2,7 @@
   <div class="auth-page">
     <div class="auth-card">
       <img src="/素材/白底logo.png" class="logo" />
-      <h2>登录 CHESNAKE</h2>
+      <h2>登录 CHESNACK</h2>
       <el-form :model="form" @submit.prevent="submit">
         <el-form-item>
           <el-input v-model="form.email" placeholder="邮箱账号" size="large" />

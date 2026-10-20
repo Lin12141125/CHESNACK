@@ -7,7 +7,7 @@
 			"command": "call",
 			"args": [
 				"D:\\DownLoad\\chesnake-deploy\\backend-build.cmd",
-				"${workspaceFolder}\\CHESNAKE1\\backend",
+				"${workspaceFolder}\\CHESNACK\\backend",
 				"compile"
 			],
 			"problemMatcher": [],
@@ -23,7 +23,7 @@
 			"args": [
 				"-NoProfile",
 				"-Command",
-				"Start-Process -FilePath 'cmd.exe' -ArgumentList '/c','D:\\DownLoad\\chesnake-deploy\\backend-run.cmd ${workspaceFolder}\\CHESNAKE1\\backend > D:\\DownLoad\\chesnake-deploy\\backend.log 2>&1' -WindowStyle Hidden; Write-Output 'backend starting, log: D:\\DownLoad\\chesnake-deploy\\backend.log'"
+				"Start-Process -FilePath 'cmd.exe' -ArgumentList '/c','D:\\DownLoad\\chesnake-deploy\\backend-run.cmd ${workspaceFolder}\\CHESNACK\\backend > D:\\DownLoad\\chesnake-deploy\\backend.log 2>&1' -WindowStyle Hidden; Write-Output 'backend starting, log: D:\\DownLoad\\chesnake-deploy\\backend.log'"
 			],
 			"problemMatcher": [],
 			"presentation": {
@@ -37,7 +37,7 @@
 			"command": "cmd",
 			"args": [
 				"/c",
-				"cd /d \"${workspaceFolder}\\CHESNAKE1\\frontend\" && npm install"
+				"cd /d \"${workspaceFolder}\\CHESNACK\\frontend\" && npm install"
 			],
 			"problemMatcher": [],
 			"presentation": {
@@ -52,7 +52,7 @@
 			"args": [
 				"-NoProfile",
 				"-Command",
-				"Start-Process -FilePath 'cmd.exe' -ArgumentList '/c','cd /d ${workspaceFolder}\\CHESNAKE1\\frontend && npm run dev > D:\\DownLoad\\chesnake-deploy\\frontend.log 2>&1' -WindowStyle Hidden; Write-Output 'frontend starting, log: D:\\DownLoad\\chesnake-deploy\\frontend.log'"
+				"Start-Process -FilePath 'cmd.exe' -ArgumentList '/c','cd /d ${workspaceFolder}\\CHESNACK\\frontend && npm run dev > D:\\DownLoad\\chesnake-deploy\\frontend.log 2>&1' -WindowStyle Hidden; Write-Output 'frontend starting, log: D:\\DownLoad\\chesnake-deploy\\frontend.log'"
 			],
 			"problemMatcher": [],
 			"presentation": {
@@ -66,7 +66,7 @@
 			"command": "call",
 			"args": [
 				"D:\\DownLoad\\chesnake-deploy\\build2.cmd",
-				"${workspaceFolder}\\CHESNAKE1"
+				"${workspaceFolder}\\CHESNACK"
 			],
 			"problemMatcher": [],
 			"presentation": {
@@ -111,12 +111,12 @@
 		{
 			"label": "compile-fix",
 			"type": "shell",
-			"command": "call D:\\DownLoad\\chesnake-deploy\\backend-build.cmd \"e:\\LinCom\\大三上\\团队项目\\项目实现\\8-GQ\\CHESNAKE1\\backend\" compile"
+			"command": "call D:\\DownLoad\\chesnake-deploy\\backend-build.cmd \"e:\\LinCom\\大三上\\团队项目\\项目实现\\8-GQ\\CHESNACK\\backend\" compile"
 		},
 		{
 			"label": "restart-fix",
 			"type": "shell",
-			"command": "for /f \"tokens=5\" %a in ('netstat -ano ^| findstr \":8081.*LISTENING\"') do taskkill /f /pid %a >nul 2>nul & powershell -NoProfile -Command \"Start-Process -FilePath 'cmd.exe' -ArgumentList '/c','D:\\DownLoad\\chesnake-deploy\\backend-run.cmd e:\\LinCom\\大三上\\团队项目\\项目实现\\8-GQ\\CHESNAKE1\\backend > D:\\DownLoad\\chesnake-deploy\\backend.log 2>&1' -WindowStyle Hidden; Write-Output 'BACKEND-RESTARTING'\""
+			"command": "for /f \"tokens=5\" %a in ('netstat -ano ^| findstr \":8081.*LISTENING\"') do taskkill /f /pid %a >nul 2>nul & powershell -NoProfile -Command \"Start-Process -FilePath 'cmd.exe' -ArgumentList '/c','D:\\DownLoad\\chesnake-deploy\\backend-run.cmd e:\\LinCom\\大三上\\团队项目\\项目实现\\8-GQ\\CHESNACK\\backend > D:\\DownLoad\\chesnake-deploy\\backend.log 2>&1' -WindowStyle Hidden; Write-Output 'BACKEND-RESTARTING'\""
 		},
 		{
 			"label": "delete-old-queues",
